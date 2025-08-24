@@ -97,7 +97,7 @@ async function getPlayersMap() {
 
   const url = 'https://api.sleeper.app/v1/players/nfl';
   const players = await (await fetch(url)).json();
-  localStorage.setItem(key, JSON.stringify({ts: Date.now(), data: players}));
+  localStorage.setItem("sleeper_players_cache", JSON.stringify(players));
   return players;
 }
 
