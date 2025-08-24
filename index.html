@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sleeper Multi-League Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <h1>Sleeper Multi-League: Trades & Waiver Tracker</h1>
+    <p>Enter league IDs (comma separated) or use the repo's <code>leagues.json</code>.</p>
+
+    <label>
+      League IDs (comma separated):
+      <input id="leaguesInput" placeholder="118233012...,12537..." />
+    </label>
+    <div>
+      <button id="goBtn">Fetch & Compare</button>
+      <button id="useRepoBtn">Use data/results.json (if available)</button>
+    </div>
+
+    <section id="status"></section>
+    <section id="controls"></section>
+    <section id="results"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
