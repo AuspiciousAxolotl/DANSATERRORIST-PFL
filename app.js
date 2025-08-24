@@ -96,8 +96,13 @@ async function getPlayersMap() {
   } catch(e){ /* ignore */ }
 
   const url = 'https://api.sleeper.app/v1/players/nfl';
-  const players = await (await fetch(url)).json();
-localStorage.setItem("sleeper_players_cache", JSON.stringify(players));
+const minimalPlayers = {};
+for (const [id, player] of Object.entries(players)) {
+  minimalPlayers[id] = {
+    full_name: player.full_name,
+    position: player.position,
+    team: player.team
+  };
   return players;
 }
 
